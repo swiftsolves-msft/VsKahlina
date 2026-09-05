@@ -2,36 +2,26 @@
 
 Mobile web **5-shot penalty shootout** vs Charlotte FC goalkeeper **Kristijan Kahlina**.
 
-Virtua Striker / N64 low-poly arcade look: bold HUD, dense-crowd stadium, flick physics, anticipating goalie AI.
+Virtua Striker / N64 low-poly arcade look with Bank of America Stadium–style bowl (upper seats, CLT crown FC fascia, dual LED ribbons, suites, section numbers, denser lower crowd).
 
 **Repo:** https://github.com/swiftsolves-msft/VsKahlina
 
-## Controls
+## Play
 
-1. Tap **KICK OFF**
-2. **Flick / swipe** the ball at the goal (mouse works on desktop)
-3. Faster flick = more power; touch **force** adds a little when available
-4. Exactly **5** shots → **GOAL** / **SAVE** / **MISS**
+1. Open `index.html` (or GitHub Pages)
+2. Tap **KICK OFF**
+3. Flick / swipe the ball toward goal (mouse works too)
+4. Faster flick = more power
 5. Kahlina reads early flick direction, then dives (sometimes wrong-footed)
-6. Mute toggle; light vibrate on goal/save when supported
+6. 5 shots → GOAL / SAVE / MISS → rematch
 
-## Run locally
-
-```bash
-python3 -m http.server 8080
-```
-
-Open `http://localhost:8080`.
+Mute toggles SFX. Vibration on goal/save when the device supports it.
 
 ## Files
 
-| File | Role |
-|------|------|
-| `index.html` | Shell + HUD |
-| `style.css` | Portrait arcade UI |
-| `g0.js`…`g7.js` + `gboot.js` | Game logic (chunked for GitHub MCP) |
-| `game.js` | Full source (local) |
-| `stadium.jpg` / `stadium-data.js` | Optional photo backdrop |
+- `index.html` / `style.css` — shell + arcade UI
+- `g00.js`…`g15.js` + `gboot.js` — game source as line chunks (assembles at runtime)
+- `game.js` — full source (local / optional)
 
 ## Deploy
 
@@ -40,4 +30,4 @@ Static-host the folder. GitHub Pages on `main` → `https://swiftsolves-msft.git
 ## Credits
 
 - Goalkeeper: Kristijan Kahlina (Charlotte FC)
-- Aesthetic nod: Sega Virtua Striker–era arcade soccer
+- Kit: royal blue torso, light sleeves, white gloves, black pants, white/neon cleats
