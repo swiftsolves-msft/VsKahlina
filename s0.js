@@ -69,5 +69,5 @@ window.__GS=(window.__GS||[]);window.__GS.push(
 "   x: ((e.clientX - r.left) / r.width) * W,\n      y: ((e.clientY - r.top) / r."+
 "height) * H,\n      force: typeof e.force === 'number' ? e.force : (typeof e.we"+
 "bkitForce === 'number' ? Math.min(1, e.webkitForce / 3) : 0),\n    };\n  }\n  fun"+
-"ction onPointerDown(e) {\n    if"
+"ction onPointerDown(e) {\n    if "
 );
