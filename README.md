@@ -2,9 +2,9 @@
 
 Mobile web **5-shot penalty shootout** — flick a soccer ball past Charlotte FC goalkeeper **Christina Kahlina**.
 
-Arcade look inspired by **Virtua Striker / Virtua Soccer**: bold HUD, saturated stadium backdrop, chunky kicker POV — not a photo sim.
+Arcade look inspired by **Virtua Striker / Virtua Soccer**: bold HUD, saturated stadium (procedural denser crowd + optional photo overlay), chunky kicker POV.
 
-**Play:** https://github.com/swiftsolves-msft/VsKahlina (open `index.html` or any static host)
+**Repo:** https://github.com/swiftsolves-msft/VsKahlina
 
 ## How to play
 
@@ -19,31 +19,24 @@ Works with **touch** on phones (portrait) and **mouse** drag on desktop.
 
 ## Run locally
 
-No build step — static files only:
-
 ```bash
 python3 -m http.server 8080
 ```
 
-Open `http://localhost:8080` (phone on the same network, or Chrome device mode).
-
-You can also open `index.html` directly; the stadium image is embedded in `stadium-data.js` so the game stays self-contained.
+Open `http://localhost:8080`.
 
 ## Files
 
 | File | Role |
 |------|------|
-| `index.html` | Shell, HUD, start/end overlays |
-| `style.css` | Portrait layout, safe areas, arcade UI |
-| `game.js` | Flick physics, goalie AI, rendering |
-| `stadium-data.js` | Base64 JPEG backdrop (`window.STADIUM_BG`) |
-| `stadium.jpg` | Same backdrop as a plain JPEG (optional) |
+| `index.html` | Shell + HUD |
+| `style.css` | Portrait / arcade UI |
+| `code0.js`…`code5.js` + `codeboot.js` | Game logic (chunked) |
+| `stadium-data.js` / `stadium.jpg` | Optional photo backdrop (local) |
 
 ## Deploy
 
-Host the folder on any static provider (GitHub Pages, Netlify, S3, nginx, etc.). No backend or env vars required.
-
-For GitHub Pages: enable Pages on the `main` branch root, then visit `https://swiftsolves-msft.github.io/VsKahlina/`.
+Static host any folder (GitHub Pages, Netlify, etc.). Enable Pages on `main` root → `https://swiftsolves-msft.github.io/VsKahlina/`.
 
 ## Credits
 
