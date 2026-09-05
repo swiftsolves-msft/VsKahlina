@@ -1,23 +1,21 @@
 # VsKahlina
 
-Mobile web **5-shot penalty shootout** — flick a soccer ball past Charlotte FC goalkeeper **Christina Kahlina**.
+Mobile web **5-shot penalty shootout** vs Charlotte FC goalkeeper **Christina Kahlina**.
 
-Arcade look inspired by **Virtua Striker / Virtua Soccer**: bold HUD, saturated stadium (procedural denser crowd + optional photo overlay), chunky kicker POV.
+Virtua Striker–inspired arcade look: bold HUD, dense crowd stadium, flick physics, anticipating goalie AI.
 
 **Repo:** https://github.com/swiftsolves-msft/VsKahlina
 
-## How to play
+## Controls
 
-1. Tap **KICK OFF**.
-2. **Flick** (swipe) the ball toward the goal — direction + release speed set the shot.
-3. On devices that expose touch **force**, a firmer press adds a bit of power.
-4. You get **exactly 5 shots**. Each ends as **GOAL**, **SAVE**, or **MISS**.
-5. Kahlina **anticipates** early flick direction, then dives after a short reaction delay — she can be wrong-footed.
-6. Use the speaker button to **mute**. Goal/save may **vibrate** when the browser allows it.
+1. **KICK OFF**
+2. **Flick / swipe** the ball at the goal (mouse drag works on desktop)
+3. Faster flick = more power; touch **force** adds a little when available
+4. Exactly **5** shots → GOAL / SAVE / MISS
+5. Kahlina reads early flick direction, then dives (sometimes wrong-footed)
+6. Mute toggle; light vibrate on goal/save when supported
 
-Works with **touch** on phones (portrait) and **mouse** drag on desktop.
-
-## Run locally
+## Run
 
 ```bash
 python3 -m http.server 8080
@@ -27,18 +25,10 @@ Open `http://localhost:8080`.
 
 ## Files
 
-| File | Role |
-|------|------|
-| `index.html` | Shell + HUD |
-| `style.css` | Portrait / arcade UI |
-| `code0.js`…`code5.js` + `codeboot.js` | Game logic (chunked) |
-| `stadium-data.js` / `stadium.jpg` | Optional photo backdrop (local) |
+- `index.html`, `style.css` — shell + UI
+- `p0.js`…`p3.js` + `pboot.js` — game logic
+- `stadium.jpg` / `stadium-data.js` — optional photo assets (local)
 
 ## Deploy
 
-Static host any folder (GitHub Pages, Netlify, etc.). Enable Pages on `main` root → `https://swiftsolves-msft.github.io/VsKahlina/`.
-
-## Credits
-
-- Goalkeeper: Christina Kahlina (Charlotte FC)
-- Aesthetic nod: Sega Virtua Striker–era arcade soccer
+Static host the folder. GitHub Pages on `main` → `https://swiftsolves-msft.github.io/VsKahlina/`
