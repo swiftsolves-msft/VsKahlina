@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#041018" />
+  <meta name="description" content="VsKahlina — 5-shot flick shootout vs Christina Kahlina. Virtua Striker–inspired arcade mobile game." />
+  <title>VsKahlina</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="390" height="844" aria-label="VsKahlina shootout"></canvas>
+
+    <div id="hud" class="hud" aria-live="polite">
+      <div class="hud-left">
+        <div class="arcade-title">VsKAHLINA</div>
+        <div class="shot-meta"><span id="shotLabel">SHOT 1 / 5</span></div>
+      </div>
+      <div class="hud-right">
+        <div class="score-box">
+          <span class="score-label">GOALS</span>
+          <span id="scoreValue" class="score-value">0</span>
+        </div>
+        <button id="muteBtn" class="icon-btn" type="button" aria-label="Mute">🔊</button>
+      </div>
+    </div>
+
+    <div id="banner" class="banner hidden" aria-live="assertive"></div>
+
+    <div id="hint" class="hint">FLICK THE BALL</div>
+
+    <div id="start" class="overlay">
+      <div class="panel arcade-panel">
+        <p class="kicker">CHARLOTTE FC · ARCADE</p>
+        <h1>VsKAHLINA</h1>
+        <p class="tagline">5-SHOT PENALTY SHOOTOUT</p>
+        <p class="blurb">Flick past goalie <strong>Christina Kahlina</strong>. She reads your shot — wrong-foot her or bury it.</p>
+        <ul class="howto">
+          <li>Swipe the ball toward the net</li>
+          <li>Faster flick = more power</li>
+          <li>5 attempts · GOAL / SAVE / MISS</li>
+        </ul>
+        <button id="playBtn" class="big-btn" type="button">KICK OFF</button>
+      </div>
+    </div>
+
+    <div id="end" class="overlay hidden">
+      <div class="panel arcade-panel">
+        <p class="kicker">FINAL</p>
+        <h2 id="endTitle">SHOOTOUT OVER</h2>
+        <p id="endScore" class="end-score">0 / 5</p>
+        <p id="endFlavor" class="blurb"></p>
+        <button id="rematchBtn" class="big-btn" type="button">REMATCH</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="stadium-data.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
