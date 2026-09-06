@@ -22,7 +22,7 @@ window.__GS=(window.__GS||[]);window.__GS.push(
 "tY * H - field.goalBottom * H)));\n      b.scale = 1 - progress * 0.55;\n      /"+
 "/ Mild late assist — weaker so central shots stay punishable\n      if (progres"+
 "s > 0.28 && progress < 0.9) {\n        const mid = W * 0.5;\n        b.vx += (mi"+
-"d - b.x) * 0.00135 * (1 - progress);\n      }\n      b.spinning += b.vx * 0.015;"+
+"d - b.x) * 0.00025 * (1 - progress);\n      }\n      b.spinning += b.vx * 0.015;"+
 "\n      state.trail.push({ x: b.x, y: b.y - b.z * 0.35, s: b.scale, life: 1 });"+
 "\n      if (state.trail.length > 16) state.trail.shift();\n      b.vx *= 0.993;\n"+
 "      b.vy *= 0.997;\n      // Early save check while ball still approaching li"+
